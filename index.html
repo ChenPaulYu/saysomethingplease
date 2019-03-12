@@ -65,7 +65,7 @@
     firebase.database().ref('textcollection/latest').update({
       'text': input
     });
-    firebase.database().ref('textcollection/history').update({
+    firebase.database().ref('textcollection/history').set({
       'text': input
     });
   }
