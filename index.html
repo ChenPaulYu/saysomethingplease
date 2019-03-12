@@ -39,30 +39,34 @@
   console.clear()
 
   var config = {
-  apiKey: "AIzaSyDublDYDws4SBSD976FC8hwhoVAWoTtinU",
-  authDomain: "zonesound-b40d4.firebaseapp.com",
-  databaseURL: "https://zonesound-b40d4.firebaseio.com",
-  projectId: "zonesound-b40d4",
-  storageBucket: "zonesound-b40d4.appspot.com",
-  messagingSenderId: "133205700802"
+    apiKey: "AIzaSyDublDYDws4SBSD976FC8hwhoVAWoTtinU",
+    authDomain: "zonesound-b40d4.firebaseapp.com",
+    databaseURL: "https://zonesound-b40d4.firebaseio.com",
+    projectId: "zonesound-b40d4",
+    storageBucket: "zonesound-b40d4.appspot.com",
+    messagingSenderId: "133205700802"
   };
   firebase.initializeApp(config);
+  
   const database = firebase.database();
-
   const latest = database.ref('textcollection/latest');
-  latest.on('value', function (snapshot) {
-  var input = snapshot.val().text
-  $('input').text(input)
-  console.log(input)
-  var msg = new SpeechSynthesisUtterance(input)
-  window.speechSynthesis.speak(msg)
+
+    latest.on('value', function (snapshot) {
+    var input = snapshot.val().text
+    $('input').text(input)
+    console.log(input)
+    var msg = new SpeechSynthesisUtterance(input)
+    window.speechSynthesis.speak(msg)
   });
 
   function speak(){
     var input = $("#input").val()
 
     firebase.database().ref('textcollection/latest').update({
-    'text': input
+      'text': input
+    });
+    firebase.database().ref('textcollection/history').update({
+      'text': input
     });
   }
   </script>
