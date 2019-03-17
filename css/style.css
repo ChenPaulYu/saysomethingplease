@@ -25,15 +25,16 @@ body {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  
+  z-index: 1;
   box-sizing: border-box;
-  /* padding: 30px; */
-  margin-top: 15%;
-  /* background-image: url("https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/1185x800/6f63800072241523eb74dc7931882bd5/Untitled-1-01.png"); */
   background-position: center;
   background-size: cover;
   white-space: nowrap;
-
+  border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 
