@@ -6,46 +6,116 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  // test
+}
+html .title, body .title {
+  font-size: 28px;
 }
 
 body {
-  padding: 100px;
   box-sizing: border-box;
-  background-color: #292B73;
+  background-color: #171717;
   justify-content: center;
   align-items: center;
 }
 
-.panels {
-  display: flex;
+.box {
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-top: 0px;
+  background-image: url("https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/1185x800/6f63800072241523eb74dc7931882bd5/Untitled-1-01.png");
+  background-position: center;
+  background-size: cover;
+  white-space: nowrap;
+}
+
+.up {
+  width: 100%;
+  height: 210px;
+  margin-top: 30px;
+}
+
+.down {
   width: 100%;
 }
 
 .panel {
-  flex: 1;
-  padding: 20px;
+  padding: 40px 60px 50px 60px;
   background-color: #fff;
-  color: #292B73;
+  color: #58B7C0;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 70px 70px 70px 20px;
   position: relative;
   z-index: 1;
+  width: 180px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.man {
+  width: 120px;
+  margin-left: 18%;
 }
 
 button.speak {
   flex: 4;
-  margin: 5px;
   margin-left: 0px;
-  background-color: #FFB637;
-}
-
-h2 {
-  color: white;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-h4 {
   margin-top: 5px;
+  background-color: #58B7C0;
+  height: 30px;
+  letter-spacing: 0.75px;
+  font-family: Futura;
+  font-weight: 500;
+  border-radius: 5px;
+  padding-left: 43px;
+  padding-right: 43px;
+  margin-left: 1%;
+  border: 1px solid #fff;
+}
+
+.title {
+  color: #58B7C0;
+  font-weight: 700;
+  font-family: Futura;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 50px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 90%;
+}
+
+.text {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-weight: 600;
+  font-size: 17px;
+  font-family: Futura;
+  font-weight: 500;
+}
+
+textarea {
+  border: 1px solid #D8D8D8;
+  letter-spacing: 1px;
+  width: 155px;
+  border-radius: 5px;
+  height: 40px;
+  font: open-sans;
+  padding: 8px;
+  margin-left: 5px;
+}
+
+.cosmoback {
+  width: 100%;
+  border: 1px solid;
 }
