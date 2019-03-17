@@ -17,22 +17,51 @@ var playing = false;
 var autoplay = false;
 var autoplayNum = 5;
 var intTime = 60;
+var latest;
 
 const database = firebase.database();
 const collection = database.ref('textcollection');
 
 $('.speak').on('click',speak)
 
+var SW9 = new SiriWave({
+    style: "ios9",
+    container: document.getElementById("container-9"),
+    autostart: true,
+    amplitude: 1
+});
+
+
 
 collection.on('value', function (snapshot) {
     window.speechSynthesis.cancel();
+    console.log(latest)
     playing = true;
     json = snapshot.val();
+    if (typeof latest === "undefined") {
+        SW9.setAmplitude(1)
+    } else {
+        SW9.setAmplitude(10)
+    }
     var last = json[Object.keys(json).pop()]
-    console.log(last['text']);
+
+    console.log(SW9.amplitude)
     speakout(last['text']);
+    latest = last
+
     playing = false;
 })
+
+
+// setInterval(function(){
+
+//     if(say) {
+//         SW9.setAmplitude(30)
+//     }else {
+//         SW9.setAmplitude(1)
+//     }
+//     console.log(SW9.amplitude)
+// },100)
 
 setInterval(function () {
     checkTime();
@@ -93,6 +122,10 @@ function speakout(input) {
     var msg = new SpeechSynthesisUtterance(input)
     window.speechSynthesis.speak(msg)
     lastTime = new Date();
+    msg.onend = function (event) {
+        SW9.setAmplitude(1)
+        console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' milliseconds.');
+    }
 }
 
 function speak() {
