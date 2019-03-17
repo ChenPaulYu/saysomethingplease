@@ -155,7 +155,7 @@ function init() {
 function addSphere() {
 
     // The loop will move from z position of -1000 to z position 1000, adding a random particle at each position. 
-    for (var z = -1000; z < 1000; z += 20) {
+    for (var z = -1000; z < 1000; z += 10) {
 
         // Make a sphere (exactly the same as before). 
         var geometry = new THREE.SphereGeometry(0.5, 32, 32)
