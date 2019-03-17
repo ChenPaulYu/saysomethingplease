@@ -25,14 +25,17 @@ body {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  
   box-sizing: border-box;
-  padding: 30px;
-  margin-top: 0px;
+  /* padding: 30px; */
+  margin-top: 20%;
   /* background-image: url("https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/1185x800/6f63800072241523eb74dc7931882bd5/Untitled-1-01.png"); */
   background-position: center;
   background-size: cover;
   white-space: nowrap;
+
 }
+
 
 .up {
   width: 100%;
@@ -120,6 +123,8 @@ textarea {
 .cosmoback {
   width: 100%;
   border: 1px solid;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -138,5 +143,4 @@ canvas {
   margin: 30px;
   margin: 0 auto;
   position: relative;
-  /* border: 1px dashed rgba(255, 255, 255, 0.4); */
 }
