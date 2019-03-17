@@ -10,34 +10,35 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
       <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
       <script src="https://unpkg.com/siriwave/dist/siriwave.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
       <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  
-<div class="cosmoback">
-  <div class="title">How Could I Make You Saying Something?</div>
-</div>
-
-<div class="box"> 
-  <div class="up">
-    <div class="panel">
-      <div class="text">Anything in your mind?</div>
-      <textarea id="input" rows="2" placeholder="請輸入文字"></textarea>
-      <div class="button"> 
-        <button class="speak"> Speak out loud</button>
+  <div class="cosmoback">
+    <div class="title">How Could I Make You Saying Something?</div>
+  </div>
+  <div class="bg"></div>
+  <div class="box"> 
+    <div class="up">
+      <div class="panel">
+        <div class="text">Anything in your mind?</div>
+        <textarea id="input" rows="2" placeholder="請輸入文字"></textarea>
+        <div class="button"> 
+          <button class="speak"> Speak out loud</button>
+        </div>
       </div>
     </div>
+    <div id="container-9"></div>
+    <div class="middle">
+      <div class="triangle"></div>
+    </div>
+    <div class="down">
+      <div class="man"><img   src="https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/441x696/c5b6107d1535a18b89ad20e35fdf902c/10_MTYyOQ_%5BConverted%5D-03.png" height="180" width="120"></div>
+    </div>
   </div>
-  <div id="container-9"></div>
-  <div class="middle">
-    <div class="triangle"></div>
-  </div>
-  <div class="down">
-    <div class="man"><img   src="https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/441x696/c5b6107d1535a18b89ad20e35fdf902c/10_MTYyOQ_%5BConverted%5D-03.png" height="180" width="120"></div>
-  </div>
-</div>
+
 
 <script  src="js/index.js"></script>
 

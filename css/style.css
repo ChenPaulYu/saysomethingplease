@@ -28,7 +28,7 @@ body {
   box-sizing: border-box;
   padding: 30px;
   margin-top: 0px;
-  background-image: url("https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/1185x800/6f63800072241523eb74dc7931882bd5/Untitled-1-01.png");
+  /* background-image: url("https://trello-attachments.s3.amazonaws.com/5c8c8eea3beb278393f6e116/1185x800/6f63800072241523eb74dc7931882bd5/Untitled-1-01.png"); */
   background-position: center;
   background-size: cover;
   white-space: nowrap;
@@ -62,6 +62,7 @@ body {
   width: 120px;
   margin-top: -15%;
   margin-left: 12%;
+  position: relative;
 }
 
 button {
@@ -121,11 +122,21 @@ textarea {
   border: 1px solid;
 }
 
+
+canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}
+
 #container-9 {
   width: 300px;
   height: 100px;
   background-size: cover;
   margin: 30px;
   margin: 0 auto;
+  position: relative;
   /* border: 1px dashed rgba(255, 255, 255, 0.4); */
 }
