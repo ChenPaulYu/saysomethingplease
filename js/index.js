@@ -27,25 +27,26 @@ $('.speak').on('click',speak)
 var SW9 = new SiriWave({
     style: "ios9",
     container: document.getElementById("container-9"),
-    autostart: true,
-    amplitude: 1
+    autostart: true
 });
 
-
+SW9.setAmplitude(1)
 
 collection.on('value', function (snapshot) {
     window.speechSynthesis.cancel();
     console.log(latest)
     playing = true;
     json = snapshot.val();
+
     if (typeof latest === "undefined") {
         SW9.setAmplitude(1)
     } else {
         SW9.setAmplitude(10)
     }
-    var last = json[Object.keys(json).pop()]
 
-    console.log(SW9.amplitude)
+    var last = json[Object.keys(json).pop()]
+    // SW9.setAmplitude(10)
+    
     speakout(last['text']);
     latest = last
 
