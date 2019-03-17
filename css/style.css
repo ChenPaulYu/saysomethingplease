@@ -60,10 +60,11 @@ body {
 
 .man {
   width: 120px;
-  margin-left: 18%;
+  margin-top: -15%;
+  margin-left: 13%;
 }
 
-button.speak {
+button {
   flex: 4;
   margin-left: 0px;
   margin-top: 5px;
