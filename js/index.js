@@ -110,7 +110,9 @@ function shuffle(a) {
 
 function speakout(input) {
     var msg = new SpeechSynthesisUtterance(input)
+    msg.lang = "zh-TW"
     window.speechSynthesis.speak(msg)
+    
     lastTime = new Date();
     msg.onend = function (event) {
         SW9.setAmplitude(1)
